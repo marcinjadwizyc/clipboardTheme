@@ -3,15 +3,26 @@
 	margin: 0 auto;
 }
 
-.header {
+.title {
+	margin-bottom: 1rem;
+}
+
+.title--primary ~ .text,
+.title--secondary ~ .text {
+	margin-bottom: 3rem;
+}
+
+.header,
+.main__section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 0 3rem;
-	min-height: 100vh;
 	text-align: center;
+}
 
+.header,
+.features {
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -20,26 +31,50 @@
 	&__img {
 		margin-bottom: 4rem;
 	}
+}
 
-	&__title {
-		margin-bottom: 1rem;
-	}
+.header {
+	padding: 0 3rem;
+	min-height: 100vh;
 
-	&__text {
+	&__img {
 		margin-bottom: 4rem;
 	}
+}
+
+.main__section {
+	padding: 6rem 3rem;
 }
 
 .btn:not(:last-child) {
 	margin-bottom: 1.5rem;
 }
 
+.feature:not(:last-child) {
+	margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 500px) {
+	.title--primary ~ .text,
+	.title--secondary ~ .text {
+		max-width: 70%;
+	}
+
+	.features {
+		&__img {
+			width: 30rem;
+			@include marginAuto;
+		}
+	}
+
+	.feature {
+		max-width: 350px;
+		@include marginAuto;
+	}
+}
+
 @media only screen and (min-width: 600px) {
 	.header {
-		&__text {
-			max-width: 70%;
-		}
-
 		&__container {
 			flex-direction: row;
 		}
@@ -48,5 +83,29 @@
 	.btn:not(:last-child) {
 		margin-bottom: 0;
 		margin-right: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 700px) {
+	.features {
+		&__container {
+			flex-direction: row;
+			align-items: center;
+		}
+
+		&__img {
+			margin-bottom: 0;
+			max-width: 100%;
+		}
+
+		&__content {
+			text-align: left;
+			width: 50%;
+			padding-left: 4rem;
+		}
+	}
+
+	.feature {
+		max-width: 100%;
 	}
 }
