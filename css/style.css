@@ -100,7 +100,9 @@ a {
     align-items: center; }
   .features__img {
     margin-bottom: 0;
-    max-width: 100%; }
+    max-width: 100%;
+    width: 50%;
+    margin: 0; }
   .features__content {
     text-align: left;
     width: 50%;
