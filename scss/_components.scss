@@ -1,0 +1,74 @@
+.background--header {
+	background-image: url("../assets/bg-header-mobile.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.img {
+	max-width: 100%;
+}
+
+.btn {
+	color: #fff;
+	font-weight: 600;
+	font-size: 1.3rem;
+	padding: 1rem 5rem;
+	text-align: center;
+	border-radius: 25px;
+	position: relative;
+	transition: $transitionTime;
+
+	&::after {
+		content: "";
+		display: inherit;
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+		z-index: -1;
+		transition: .1s;
+	}
+
+	&:active::after {
+		bottom: -1px;
+	}
+
+	&--cyan {
+		background-color: $colorCyan;
+
+		&::after {
+			background-color: darken($colorCyan, 10%);
+		}
+
+		&:hover,
+		&:focus {
+			background-color: lighten($colorCyan, 5%);
+		}
+	}
+
+	&--blue {
+		background-color: $colorLightBlue;
+
+		&::after {
+			background-color: darken($colorLightBlue, 10%);
+		}
+
+		&:hover,
+		&:focus {
+			background-color: lighten($colorLightBlue, 5%);
+		}
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.background--header {
+		background-image: url("../assets/bg-header-desktop.png");
+	}
+
+	.btn {
+		padding: 0.8rem 3rem;
+	}
+}

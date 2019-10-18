@@ -12,3 +12,101 @@
 body {
   box-sizing: border-box;
   font-family: "Bai Jamjuree", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.title {
+  font-weight: 600;
+  color: #4c545d; }
+  .title--primary {
+    font-size: 2.4rem; }
+
+.text {
+  color: #9fabb2;
+  font-size: 1.3rem; }
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+  min-height: 100vh;
+  text-align: center; }
+  .header__container {
+    display: flex;
+    flex-direction: column; }
+  .header__img {
+    margin-bottom: 4rem; }
+  .header__title {
+    margin-bottom: 1rem; }
+  .header__text {
+    margin-bottom: 4rem; }
+
+.btn:not(:last-child) {
+  margin-bottom: 1.5rem; }
+
+@media only screen and (min-width: 600px) {
+  .header__text {
+    max-width: 70%; }
+  .header__container {
+    flex-direction: row; }
+  .btn:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 1.5rem; } }
+
+.background--header {
+  background-image: url("../assets/bg-header-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.img {
+  max-width: 100%; }
+
+.btn {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 1rem 5rem;
+  text-align: center;
+  border-radius: 25px;
+  position: relative;
+  transition: 0.4s; }
+  .btn::after {
+    content: "";
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    z-index: -1;
+    transition: .1s; }
+  .btn:active::after {
+    bottom: -1px; }
+  .btn--cyan {
+    background-color: #26baa4; }
+    .btn--cyan::after {
+      background-color: #1d907f; }
+    .btn--cyan:hover, .btn--cyan:focus {
+      background-color: #2acfb7; }
+  .btn--blue {
+    background-color: #6173ff; }
+    .btn--blue::after {
+      background-color: #2e46ff; }
+    .btn--blue:hover, .btn--blue:focus {
+      background-color: #7a8aff; }
+
+@media only screen and (min-width: 600px) {
+  .background--header {
+    background-image: url("../assets/bg-header-desktop.png"); }
+  .btn {
+    padding: 0.8rem 3rem; } }

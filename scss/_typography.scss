@@ -1,0 +1,13 @@
+.title {
+	font-weight: 600;
+	color: $colorDarkGray;
+
+	&--primary {
+		font-size: 2.4rem;
+	}
+}
+
+.text {
+	color: $colorGray;
+	font-size: 1.3rem;
+}
