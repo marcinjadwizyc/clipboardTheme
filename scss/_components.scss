@@ -1,8 +1,12 @@
-.background--header {
+.headerBcg {
 	background-image: url("../assets/bg-header-mobile.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.footerBcg {
+	background-color: lighten($colorGray, 25%);
 }
 
 .img {
@@ -63,12 +67,59 @@
 	}
 }
 
+.nav {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		list-style: none;
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+
+	&__link {
+		font-size: 1.3rem;
+		transition: $transitionTime;
+
+		&:hover,
+		&:focus {
+			color: $colorCyan;
+		}
+	}
+}
+
+.iconLink {
+	&__icon {
+		transition: $transitionTime;
+		font-size: 26px;
+
+		&:hover,
+		&:focus {
+			color: $colorCyan;
+		}
+	}
+}
+
 @media only screen and (min-width: 600px) {
-	.background--header {
+	.headerBcg {
 		background-image: url("../assets/bg-header-desktop.png");
 	}
 
 	.btn {
 		padding: 0.8rem 3rem;
+	}
+
+	.nav {
+		&__list {
+			flex-direction: row;
+		}
+
+		&__item:not(:last-child) {
+			margin-bottom: 0;
+			margin-right: 3rem;
+			line-height: 1.5;
+		}
 	}
 }

@@ -1,6 +1,6 @@
 .wrapper {
 	max-width: 1200px;
-	margin: 0 auto;
+	@include marginAuto;
 }
 
 .title {
@@ -9,11 +9,12 @@
 
 .title--primary ~ .text,
 .title--secondary ~ .text {
-	margin-bottom: 3rem;
+	margin-bottom: 4rem;
 }
 
 .header,
-.main__section {
+.main__section,
+.footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -22,12 +23,16 @@
 }
 
 .header,
-.features {
+.features,
+.cta {
 	&__container {
 		display: flex;
 		flex-direction: column;
 	}
+}
 
+.header,
+.features {
 	&__img {
 		margin-bottom: 4rem;
 	}
@@ -38,20 +43,59 @@
 	min-height: 100vh;
 
 	&__img {
-		margin-bottom: 4rem;
+		margin-bottom: 5rem;
 	}
 }
 
 .main__section {
-	padding: 6rem 3rem;
+	padding: 8rem 3rem;
 }
 
 .btn:not(:last-child) {
 	margin-bottom: 1.5rem;
 }
 
-.feature:not(:last-child) {
-	margin-bottom: 3rem;
+.brands {
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-top: 0;
+	padding-bottom: 0;
+
+	&__img {
+		margin: 4rem 2rem;
+	}
+}
+
+.feature {
+	max-width: 350px;
+	@include marginAuto;
+
+	&:not(:last-child),
+	&__icon {
+		margin-bottom: 3rem;
+	}
+
+	&__icon {
+		height: 32px;
+	}
+}
+
+.footer {
+	padding: 3rem;
+	color: $colorDarkGray;
+
+	&__img {
+		width: 4rem;
+	}
+
+	&__img,
+	&__nav {
+		margin-bottom: 3rem;
+	}
+}
+
+.iconLink:not(:last-child) {
+	margin-right: 2rem;
 }
 
 @media only screen and (min-width: 500px) {
@@ -66,15 +110,11 @@
 			@include marginAuto;
 		}
 	}
-
-	.feature {
-		max-width: 350px;
-		@include marginAuto;
-	}
 }
 
 @media only screen and (min-width: 600px) {
-	.header {
+	.header,
+	.cta {
 		&__container {
 			flex-direction: row;
 		}
@@ -83,6 +123,37 @@
 	.btn:not(:last-child) {
 		margin-bottom: 0;
 		margin-right: 1.5rem;
+	}
+
+	.tools {
+		&__container {
+			display: flex;
+		}
+	}
+
+	.feature--withIcon:not(:last-child) {
+		margin-bottom: 0;
+		margin-right: 2rem;
+	}
+
+	.footer {
+		flex-direction: row;
+		justify-content: flex-start;
+
+		&__img,
+		&__nav {
+			margin: 0;
+		}
+
+		&__nav {
+			margin-left: 4rem;
+			max-width: 400px;
+		}
+
+		&__socialMedia {
+			margin-left: auto;
+			min-width: 130px;
+		}
 	}
 }
 
@@ -93,21 +164,23 @@
 			align-items: center;
 		}
 
-		&__img {
-			margin-bottom: 0;
-			max-width: 100%;
+		&__img,
+		&__content {
 			width: 50%;
+		}
+
+		&__img {
+			max-width: 100%;
 			margin: 0;
 		}
 
 		&__content {
 			text-align: left;
-			width: 50%;
 			padding-left: 4rem;
 		}
 	}
 
-	.feature {
+	.feature:not(.feature--withIcon) {
 		max-width: 100%;
 	}
 }
