@@ -190,7 +190,7 @@ a {
     z-index: -1;
     transition: .1s; }
   .btn:active::after {
-    bottom: -1px; }
+    transform: scale(1.03); }
   .btn--cyan {
     background-color: #26baa4; }
     .btn--cyan::after {
@@ -215,6 +215,7 @@ a {
 
 .nav__link {
   font-size: 1.3rem;
+  text-transform: capitalize;
   transition: 0.4s; }
   .nav__link:hover, .nav__link:focus {
     color: #26baa4; }

@@ -37,7 +37,7 @@
 	}
 
 	&:active::after {
-		bottom: -1px;
+		transform: scale(1.03);
 	}
 
 	&--cyan {
@@ -81,6 +81,7 @@
 
 	&__link {
 		font-size: 1.3rem;
+		text-transform: capitalize;
 		transition: $transitionTime;
 
 		&:hover,
