@@ -81,7 +81,9 @@
 
 .footer {
 	padding: 3rem;
+	padding-bottom: 4rem;
 	color: $colorDarkGray;
+	position: relative;
 
 	&__img {
 		width: 4rem;
@@ -91,6 +93,14 @@
 	&__nav {
 		margin-bottom: 3rem;
 	}
+}
+
+.credits {
+	position: absolute;
+	bottom: 1rem;
+	left: 0;
+	width: 100%;
+	text-align: center;
 }
 
 .iconLink:not(:last-child) {

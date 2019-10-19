@@ -95,11 +95,20 @@ a {
 
 .footer {
   padding: 3rem;
-  color: #4c545d; }
+  padding-bottom: 4rem;
+  color: #4c545d;
+  position: relative; }
   .footer__img {
     width: 4rem; }
   .footer__img, .footer__nav {
     margin-bottom: 3rem; }
+
+.credits {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  text-align: center; }
 
 .iconLink:not(:last-child) {
   margin-right: 2rem; }
@@ -237,3 +246,8 @@ a {
     margin-bottom: 0;
     margin-right: 3rem;
     line-height: 1.5; } }
+
+.credits__link {
+  transition: 0.4s; }
+  .credits__link:hover, .credits__link:focus {
+    color: #26baa4; }

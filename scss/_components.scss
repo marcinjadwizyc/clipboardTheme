@@ -124,3 +124,14 @@
 		}
 	}
 }
+
+.credits {
+	&__link {
+		transition: $transitionTime;
+
+		&:hover,
+		&:focus {
+			color: $colorCyan;
+		}
+	}
+}
