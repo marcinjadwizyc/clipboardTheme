@@ -1,5 +1,5 @@
 .wrapper {
-	max-width: 1200px;
+	max-width: 1440px;
 	@include marginAuto;
 }
 
@@ -147,17 +147,22 @@
 
 		&__nav {
 			margin-left: 4rem;
-			max-width: 400px;
+			max-width: 30rem;
 		}
 
 		&__socialMedia {
 			margin-left: auto;
-			min-width: 130px;
+			min-width: 140px;
 		}
 	}
 }
 
 @media only screen and (min-width: 700px) {
+	.title--primary ~ .text,
+	.title--secondary ~ .text {
+		max-width: 60%;
+	}
+
 	.features {
 		&__container {
 			flex-direction: row;
@@ -180,7 +185,11 @@
 		}
 	}
 
-	.feature:not(.feature--withIcon) {
-		max-width: 100%;
+	.feature {
+		max-width: 400px;
+
+		&:not(.feature--withIcon) {
+			max-width: 100%;
+		}
 	}
 }

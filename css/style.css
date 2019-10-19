@@ -35,7 +35,7 @@ a {
   text-transform: capitalize; }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -133,12 +133,15 @@ a {
       margin: 0; }
     .footer__nav {
       margin-left: 4rem;
-      max-width: 400px; }
+      max-width: 30rem; }
     .footer__socialMedia {
       margin-left: auto;
-      min-width: 130px; } }
+      min-width: 140px; } }
 
 @media only screen and (min-width: 700px) {
+  .title--primary ~ .text,
+  .title--secondary ~ .text {
+    max-width: 60%; }
   .features__container {
     flex-direction: row;
     align-items: center; }
@@ -150,8 +153,10 @@ a {
   .features__content {
     text-align: left;
     padding-left: 4rem; }
-  .feature:not(.feature--withIcon) {
-    max-width: 100%; } }
+  .feature {
+    max-width: 400px; }
+    .feature:not(.feature--withIcon) {
+      max-width: 100%; } }
 
 .headerBcg {
   background-image: url("../assets/bg-header-mobile.png");
