@@ -1,5 +1,5 @@
 .headerBcg {
-	background-image: url("../assets/bg-header-mobile.png");
+	background-image: url("./assets/bg-header-mobile.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -105,7 +105,7 @@
 
 @media only screen and (min-width: 600px) {
 	.headerBcg {
-		background-image: url("../assets/bg-header-desktop.png");
+		background-image: url("./assets/bg-header-desktop.png");
 	}
 
 	.btn {
